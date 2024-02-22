@@ -1,12 +1,14 @@
 /* pallet */
 /*  #2E323F, #486081, #8B9192, #99B3C6, #CCD4D1, #F0F5F6 */
 
+html {
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
 }
 body {
   background-color: #f0f5f6;
-  width: 90%;
   justify-content: center;
   margin: 0 auto;
   padding: 0;
@@ -17,13 +19,12 @@ body {
 
 nav {
   display: flex;
-  position: sticky;
-  top: 0;
   padding: 30px;
   align-items: center;
   justify-content: space-between;
-  z-index: 999;
   background-color: #f0f5f6;
+  width: 90%;
+  margin: 0 auto;
 }
 .logo {
   font-size: 48px;
@@ -34,6 +35,21 @@ nav {
   transition: 0.5s;
   text-shadow: 3px 2px 1px #f0f5f6, 2px 2px 1px #8b9192, 3px 3px 1px #8b9192,
     4px 3px 1px #f0f5f6, 5px 3px 1px #8b9192, 6px 3px 1px #f0f5f6;
+}
+
+.logo-mobile {
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+.hamburger {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+}
+.navbar {
+  display: none;
 }
 
 .jogi {
@@ -53,8 +69,8 @@ nav a:hover {
 }
 
 .banner {
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin-top: 10px;
+  margin-bottom: 50px;
   z-index: inherit;
   background-color: #4860814f;
   height: 300px;
@@ -64,8 +80,8 @@ nav a:hover {
 }
 
 .left {
-  width: 50%;
-  padding: 0 20px;
+  padding: 0;
+  margin: 0;
   display: flex;
   text-align: justify;
 }
@@ -78,9 +94,9 @@ nav a:hover {
   color: #2e323f;
   text-align: right;
 }
+
 .left p {
-  padding-left: 20px;
-  padding-right: 100px;
+  padding-left: 10px;
   display: flex;
   text-transform: capitalize;
   font-size: larger;
@@ -91,20 +107,35 @@ nav a:hover {
 }
 
 .right {
-  width: 50%;
-  padding: 0 50px;
-}
-.right .phone {
-  width: auto;
-  height: 450px;
-  position: relative;
-  top: 20px;
-  left: 20px;
+  display: none;
 }
 
+.phone-mobile {
+  width: 90%;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  top: -150px;
+}
+
+.btn-float {
+  display: none;
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+  z-index: 999;
+  border-radius: 100%;
+  background-color: #43628e;
+  padding: 8px 10px;
+  color: #fff;
+  align-items: center;
+}
+#content {
+  width: 90%;
+  margin: 0 auto;
+}
 .plan {
   display: flex;
-  flex: 1 0 33%;
   justify-content: space-between;
   padding: 0 30px;
   margin: 50px 0;
@@ -219,6 +250,7 @@ aside .wa {
   display: flex;
   align-items: center;
   color: #486081;
+  cursor: pointer;
 }
 
 footer {
@@ -227,7 +259,6 @@ footer {
   justify-content: space-between;
   padding: 10px 50px;
   background-color: #486081;
-  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -244,4 +275,54 @@ footer {
 }
 .socialmedia svg {
   margin: 0 5px;
+}
+
+@media only screen and (min-width: 640px) {
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1024px) {
+  .logo-mobile {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+  }
+  .banner {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .left {
+    padding: 0 20px;
+  }
+  .left p {
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+  .right {
+    display: flex;
+    width: 50%;
+    padding: 0 50px;
+  }
+  .right .phone {
+    width: auto;
+    height: 450px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+  }
+  .phone-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .left {
+    padding: 0 50px;
+  }
 }

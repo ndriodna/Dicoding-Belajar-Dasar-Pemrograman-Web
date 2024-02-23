@@ -191,7 +191,7 @@ article {
 .article {
   padding: 10px 30px;
 }
-.title {
+.article h1 {
   align-items: center;
   font-size: xx-large;
   font-weight: 900;

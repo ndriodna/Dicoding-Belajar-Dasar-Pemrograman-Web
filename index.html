@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
     <title>Dicoding Web</title>
   </head>
   <body>
@@ -12,7 +12,7 @@
       <div class="logo-mobile">
         <a href="/index.html" class="logo">JOGI </a>
       </div>
-      <div class="hamburger">
+      <div class="hamburger" id="hamburger">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -23,8 +23,12 @@
           <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
         </svg>
       </div>
-      <!-- <nav class="menu-mobile"></nav> -->
-      <!-- mobile nav stop -->
+      <nav class="menu-mobile" id="menuMobile">
+        <a href="#">Home</a>
+        <a href="#content">Service</a>
+        <a href="#contact">Contat us</a>
+      </nav>
+      <!-- mobile nav end -->
       <nav class="navbar">
         <a href="/index.html" class="logo">JOGI </a>
         <div class="menu">
@@ -54,7 +58,7 @@
       <!-- mobile banner end -->
     </header>
     <main>
-      <!-- scroll to top -->
+      <!-- scroll to top start-->
       <a class="btn-float" id="btnFloat" href="#top">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +72,8 @@
           ></path>
         </svg>
       </a>
-      <!-- <div class="btn-float">Scroll To Top</div> -->
+      <!-- scroll to top end-->
+      <!-- content start -->
       <div id="content">
         <div class="plan">
           <div class="card">
@@ -102,16 +107,21 @@
             </div>
           </div>
         </div>
+        <!-- content end -->
+        <!-- article start -->
         <article>
-          <span class="title">Apa itu JOGI?</span>
-          <p>
-            Kami merupakan layanan jasa untuk game cross-paltform bernama
-            genshin impact, kami menawarkan berabagai jasa joki dari eskplorasi
-            map, menyelesaikan quest hingga menyelesaikan puzzle. Kami dapat
-            bekerja sesuai request dapat menjalankan eksplorasi per region atau
-            hanya quest saja atau bahkan semua nya sekaligus
-          </p>
+          <div class="article">
+            <span class="title">Apa itu JOGI?</span>
+            <p>
+              Kami merupakan layanan jasa untuk game cross-paltform bernama
+              genshin impact, kami menawarkan berabagai jasa joki dari
+              eskplorasi map, menyelesaikan quest hingga menyelesaikan puzzle.
+              Kami dapat bekerja sesuai request dapat menjalankan eksplorasi per
+              region atau hanya quest saja atau bahkan semua nya sekaligus
+            </p>
+          </div>
         </article>
+        <!-- article end -->
         <div class="arrow-bottom">
           <h3>ayo pesan sekarang hubungi kontak dibawah ini</h3>
           <div class="icon">
@@ -133,16 +143,16 @@
         </div>
       </div>
     </main>
+    <!-- contact start -->
     <div id="contact" class="contactus">
       <aside>
         <h2>Contact Information</h2>
         <div class="profile">
           <img src="assets/img/foto.jpg" alt="" />
         </div>
-        <h5>Rizal Putra Aditya</h5>
-        <h4>Email</h4>
-        <h6>rizalputra@students.universitasmulia.ac.id</h6>
-        <h4>Whatsap Contact</h4>
+        <span class="username">Rizal Putra Aditya</span>
+        <span class="email">rizalputra@students.universitasmulia.ac.id</span>
+        <span class="wa">Whatsap Contact</span>
         <div class="wa">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -161,6 +171,7 @@
         </div>
       </aside>
     </div>
+    <!-- contact end -->
     <footer>
       <div class="copyright">
         Copyright &copy; 2024 All Rights Reserved by Rizal Putra Aditya

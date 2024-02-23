@@ -19,11 +19,11 @@ body {
 
 nav {
   display: flex;
-  padding: 30px;
+  padding: 10px;
   align-items: center;
   justify-content: space-between;
   background-color: #f0f5f6;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 .logo {
@@ -47,6 +47,19 @@ nav {
   position: absolute;
   right: 10px;
   top: 30px;
+}
+
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+  z-index: 999;
+  position: relative;
+  right: 0;
+  top: 0;
+  /* background-color: #4860814f; */
+}
+.menu-mobile a {
+  margin: 20px 0px;
 }
 .navbar {
   display: none;
@@ -115,7 +128,7 @@ nav a:hover {
   display: flex;
   position: relative;
   margin: 0 auto;
-  top: -150px;
+  top: -100px;
 }
 
 .btn-float {
@@ -131,14 +144,13 @@ nav a:hover {
   align-items: center;
 }
 #content {
-  width: 90%;
   margin: 0 auto;
 }
 .plan {
   display: flex;
-  justify-content: space-between;
-  padding: 0 30px;
-  margin: 50px 0;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .card {
@@ -166,19 +178,27 @@ nav a:hover {
   text-align: center;
 }
 
+.plan .card {
+  margin: 20px 0px;
+}
+
 article {
+  width: 92%;
   background-color: #4860814f;
   border-radius: 15px;
-  padding: 40px 200px;
+  margin: 0 auto;
 }
-article .title {
-  text-align: center;
+.article {
+  padding: 10px 30px;
+}
+.title {
+  align-items: center;
   font-size: xx-large;
   font-weight: 900;
   color: #2e323f;
   text-transform: uppercase;
 }
-article p {
+.article p {
   text-align: justify;
   font-size: larger;
   font-weight: 300;
@@ -189,6 +209,7 @@ article p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 .arrow-bottom h3 {
   text-align: center;
@@ -212,12 +233,13 @@ article p {
   margin-bottom: 50px;
 }
 aside {
-  width: 30%;
+  width: 100%;
   padding: 10px 20px;
   box-shadow: 0px 0px 10px 2px #ccd4d1;
   justify-items: center;
   color: #486081;
   border-radius: 20px;
+  text-align: center;
 }
 .profile {
   display: flex;
@@ -228,17 +250,22 @@ aside {
   border-radius: 10px;
 }
 
-aside h5 {
+aside span {
+  margin: 20px 0px;
+}
+aside .username {
   font-size: x-large;
   font-weight: 900;
   text-transform: capitalize;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-aside h4 {
+aside .email {
   font-size: large;
   font-weight: 900;
-  text-transform: capitalize;
+  word-break: break-all;
 }
 
 aside h6 {
@@ -251,18 +278,20 @@ aside .wa {
   align-items: center;
   color: #486081;
   cursor: pointer;
+  justify-content: center;
 }
 
 footer {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  padding: 10px 50px;
+  padding: 10px 30px;
   background-color: #486081;
   bottom: 0;
   left: 0;
   right: 0;
   color: #f0f5f6;
+  align-items: center;
 }
 
 .copyright {
@@ -284,7 +313,14 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) {
+  nav {
+    width: 90%;
+    padding: 30px;
+  }
   .logo-mobile {
+    display: none;
+  }
+  .menu-mobile {
     display: none;
   }
   .hamburger {
@@ -318,6 +354,27 @@ footer {
   }
   .phone-mobile {
     display: none;
+  }
+  .plan {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 100px;
+    margin: 50px 0;
+  }
+
+  .plan .card {
+    margin: 0;
+  }
+
+  .article {
+    padding: 50px 100px;
+  }
+  aside {
+    width: 33%;
+  }
+
+  footer {
+    padding: 10px 50px;
   }
 }
 
